@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-22.04
     strategy:
       matrix:
-        php: ['8.2']
+        php: ['7.4']
     steps:
     - uses: actions/checkout@v1
 
@@ -17,7 +17,7 @@ jobs:
       uses: shivammathur/setup-php@v2
       with:
         php-version: ${{ matrix.php }}
-        coverage: xdebug
+        coverage: xdebug2
         extensions: gd, mbstring, json, curl, xml, mysql, ldap, gmp
 
     - name: INFO
