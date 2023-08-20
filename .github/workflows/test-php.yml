@@ -51,4 +51,4 @@ jobs:
         php${{ matrix.php }} artisan db:seed --force -n --class=DummyContentSeeder --database=mysql_testing
 
     - name: Run PHP tests
-      run: php${{ matrix.php }} ./vendor/bin/phpunit
+      run: php${{ matrix.php }} ./vendor/bin/phpunit --coverage-clover=coverage.xml
